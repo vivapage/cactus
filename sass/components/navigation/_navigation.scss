@@ -1,0 +1,303 @@
+.main-navigation {
+	display: grid;
+	width: 100%;
+	white-space: nowrap;
+	background-color: #fff;
+	box-shadow: 0 3px 3px rgba(180, 180, 180, 0.2);
+	position: fixed;
+	top: 0;
+	z-index: 999;
+
+
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: #fff;
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+			//	width: 200px;
+			min-width: 200px;
+			margin-left: 20px;
+			white-space: nowrap;
+			font-weight: 300;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+		padding: 5px 20px 5px 0;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		font-weight: 700;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__link-hover;
+	}
+}
+.sub-menu {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.navigation .pagination {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+
+.top-navigation {
+	display: block;
+	background-color: #fff;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.top-wrap {
+	 @include push--auto;
+	}
+
+.top-wrap {
+	@include mq('iphone5') {
+	 width: 320px;
+	}
+}
+.top-wrap {
+	@include mq('phone') {
+	 width: 400px;
+	}
+}
+.top-wrap {
+	@include mq('phone-wide') {
+	 width: 480px;
+
+	}
+}
+.top-wrap {
+	@include mq('phablet') {
+	 width: 550px;
+	}
+}
+.top-wrap {
+	@include mq('tablet-small') {
+	 width: 620px;
+	}
+}
+.top-wrap {
+	@include mq('tablet') {
+	 width: 750px;
+	}
+}
+.top-wrap {
+	@include mq('tablet-wide') {
+	 width: 1000px;
+	}
+}
+.top-wrap {
+	 @include mq('desktop') {
+		width: 1200px;
+	 }
+ }
+ .top-wrap {
+	@include mq('desktop-wide') {
+		width: 1400px;
+	 }
+}
+
+.cart-info a {
+	float: right;
+	padding: 0;
+	font-size: 1.2em;
+}
+
+.user-area {
+	margin-right: 2.5em;
+	a {
+	font-size: 1em;
+	}
+}
+
+.menu-social {
+	grid-area: social;
+}
+
+.menu-top-menu-container {
+	grid-area: top-menu;
+}
+
+.cart-info {
+	grid-area: cart;
+}
+
+button.menu-toggle {
+	margin: 0 0 15px 0;
+	padding: 0;
+	background-color: transparent;
+	color: #404040;
+	font-weight: 700;
+}
+
+
+
+/* Social Menu */
+
+.menu-social ul {
+	float: left;
+	list-style: none; 
+	margin-right: 25px;   
+}
+
+.menu-social ul li {
+	position: relative;
+	display:  inline-block; 
+	 
+}
+
+.menu-social ul li a {
+	padding: 10px 5px 10px 0;
+	font-weight: 100;
+}
+
+
+.menu-social li a:before {
+	display: inline-block;
+	//padding: 0 5px;
+	vertical-align: top;
+	font-family: 'Fontawesome';
+	font-size: 18px;
+	color: #006000;
+	-webkit-font-smoothing: antialiased;
+	content: '\f0c0';
+}
+
+.menu-social li a[href*="facebook.com"]::before {
+	content: '\f082'; color:#3b5998;
+	}
+
+.menu-social li a[href*="twitter.com"]::before {
+	content: '\f099'; color:#1da1f2;
+}
+
+.menu-social li a[href*="youtube.com"]::before {
+	content: '\f167'; color:#ff0000;
+}
+
+.menu-social li a[href*="instagram.com"]::before {
+	content: '\f16d'; color:#c32aa3;
+}
+
+nav.navigation.pagination {
+	margin: 10px auto;
+	width:50%; 
+	text-align: center;
+}
+							
+nav.navigation.pagination div.nav-links span.page-numbers.current, nav.navigation.pagination div.nav-links .page-numbers:hover {
+	padding: 3px 7px !important;
+	background: #EEE !important;
+	border: 1px solid #BBB !important;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+nav.navigation.pagination div.nav-links .page-numbers {
+	padding: 3px 7px !important;
+	background: #DDD !important;
+	border: 1px solid #BBB !important;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-left: 5px;
+}	
+
+nav.navigation.pagination div.nav-links a.page-numbers {
+	text-decoration: none;
+}

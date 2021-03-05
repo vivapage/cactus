@@ -1,0 +1,162 @@
+
+.site {
+	display: grid;
+	@include push--auto;
+	gap: 10px 20px;
+	background-color: $color__background-screen;
+	padding-top: 10px;
+	justify-content: space-between;
+}
+
+.site-info {
+	@include push--auto;
+	background-color: #fcebdb;
+	display: grid;
+	
+	gap: 10px 20px;
+}
+
+.site {
+	@include mq('iphone5') {
+	 width: 320px;
+	 	 grid-template-areas:
+	 "header"
+	 "sidebar"
+	 "main"
+	 "footer";
+	 grid-template-columns: 100%;
+	}
+}
+.site-info {
+	@include mq('iphone5') {
+		width: 320px;
+		grid-template-columns: 100%;
+}
+}
+
+.site, .site-info {
+	@include mq('phone') {
+	 width: 400px;
+	}
+}
+.site, .site-info {
+	@include mq('phone-wide') {
+	 width: 480px;
+	}
+}
+.site, .site-info {
+	@include mq('phablet') {
+	 width: 550px;
+	}
+}
+
+.site, .site-info {
+	@include mq('tablet-small') {
+	 width: 620px;
+	}
+}
+.site {
+	@include mq('tablet') {
+	 width: 750px;
+	 grid-template-columns: 1fr min-content;
+	 grid-template-areas:
+		 "header header"
+		 "main sidebar"
+		 "footer footer";
+	}
+}
+.site-info {
+	@include mq('tablet') {
+		width: 750px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+.site, .site-info {
+	@include mq('tablet-wide') {
+	 width: 1000px;
+	}
+}
+
+.site, .site-info {
+	 @include mq('desktop') {
+		width: 1200px;
+	 }
+ }
+
+ .site-info {
+	@include mq('desktop') {
+		grid-template-columns: 300px 1fr 1fr 300px;
+	}
+}
+
+ .site, .site-info {
+	@include mq('desktop-wide') {
+		width: 1400px;
+	 }
+}
+
+div#page.site.frontpage {
+	@include mq('desktop') {
+	 grid-template-areas:
+		"header header header"
+		"sidebar main sidebar-right"
+		"footer footer footer";
+		grid-template-columns: ($size__site-sidebar) auto ($size__site-sidebar);
+	}
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-main {
+	grid-area: main;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area .sidebar {
+	grid-area: sidebar;
+	display: block;
+	@include mq('tablet') {
+		width: 300px;
+	 }
+
+}
+
+.widget-area .sidebar-right {
+	grid-area: sidebar-right;
+
+}
+
+.footer-col
+h4 {
+	margin: 5px 0;
+} 
+	ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	a {
+		text-decoration: none;
+		font-size: .9em;
+	}
+}
+.site-footer {
+	grid-area: footer;
+
+}
+
+.sidebar {
+	display: block;
+	@include mq('tablet') {
+		width: 300px;
+	 }
+}
+
+.site-footer {
+	background-color: #fcebdb;
+	padding: 20px 0;
+}
+
+@import "no-sidebar";

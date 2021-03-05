@@ -1,0 +1,155 @@
+.single-product {
+
+	div.product {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			position: relative;
+			float: left;
+			@include mq('tablet') {
+				width: 150px;
+			 }
+			@include mq('tablet-wide') {
+				width: 300px;
+			 }
+				@include mq('desktop') {
+				width: 400px;
+			 }
+			 @include mq('desktop-wide') {
+				width: 400px;
+			 }
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 2em;
+				right: 1em;
+				display: block;
+				z-index: 99;
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: 0.5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+
+				&.woocommerce-product-gallery--columns-#{$i} {
+
+					.flex-control-thumbs {
+
+						li {
+
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.stock {
+
+	&:empty::before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+#tab-reviews label{
+	position: relative;
+}
+
+.summary.entry-summary {
+	float: right;
+	padding: 0 20px;
+	@include mq('tablet') {
+		width: 280px;
+	 }
+	@include mq('tablet-wide') {
+		width: 380px;
+	 }
+		@include mq('desktop') {
+		width: 480px;
+	 }
+	 @include mq('desktop-wide') {
+		width: 680px;
+	 }
+
+}
+
+h1.product_title {
+	margin: 0 0 10px 0;
+}
+
+form.cart {
+	display: inline-flex;
+}
+
+.quantity {
+	margin-right: 30px;
+	&.hidden {
+		margin-right: 0;
+	}
+}
+
+ul.list-unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li.store-name span.details {
+text-align: left;
+}
+
+.woocommerce-product-gallery__image {
+	border-radius: 5px;
+}
+
+.flex-control-thumbs li {
+	margin-right: 10px;
+	img {
+		border-radius: 5px;
+	}
+}

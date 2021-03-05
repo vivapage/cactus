@@ -1,0 +1,133 @@
+.site {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: ($size__site-sidebar) 1fr ($size__site-sidebar);
+	@include push--auto;
+	gap: 20px;
+	background-color: $color__background-screen;
+	padding-top: 10px;
+}
+
+div#page.site.site-woo {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: ($size__site-sidebar) 1fr;
+	@include push--auto;
+	gap: 20px;
+	background-color: $color__background-screen;
+	padding-top: 10px;
+}
+
+.site {
+	@include mq('iphone5') {
+	 width: 320px;
+	 grid-template-areas:
+	 "header"
+	 "sidebar-left"
+	 "main"
+	 "sidebar-right"
+	 "footer";
+	 grid-template-columns: 100%;
+	}
+}
+
+div#page.site.site-woo {
+	@include mq('iphone5') {
+	 width: 320px;
+	 grid-template-areas:
+	 "header"
+	 "sidebar-left"
+	 "main"
+	 "footer";
+	 grid-template-columns: 100%;
+	}
+}
+
+.site, div#page.site.site-woo {
+	@include mq('phone') {
+	 width: 400px;
+	}
+}
+.site, div#page.site.site-woo {
+	@include mq('phone-wide') {
+	 width: 480px;
+	}
+}
+.site, div#page.site.site-woo {
+	@include mq('phablet') {
+	 width: 550px;
+	 grid-template-areas:
+		"header header header"
+		"sidebar-left main sidebar-right"
+		"footer footer footer";
+		grid-template-columns: ($size__site-sidebar) minmax(100px, 1fr) ($size__site-sidebar);
+	}
+}
+
+div#page.site.site-woo {
+	@include mq('phablet') {
+	 width: 550px;
+	 grid-template-areas:
+		"header header"
+		"sidebar-left main"
+		"footer footer";
+		grid-template-columns: ($size__site-sidebar) 1fr;
+	}
+}
+
+.site, div#page.site.site-woo {
+	@include mq('tablet-small') {
+	 width: 620px;
+	}
+}
+.site, div#page.site.site-woo {
+	@include mq('tablet') {
+	 width: 750px;
+	}
+}
+.site, div#page.site.site-woo {
+	@include mq('tablet-wide') {
+	 width: 1000px;
+	}
+}
+.site, div#page.site.site-woo {
+	 @include mq('desktop') {
+		width: 1200px;
+	 }
+ }
+ .site, div#page.site.site-woo {
+	@include mq('desktop-wide') {
+		width: 1400px;
+	 }
+}
+
+.site-header {
+	grid-area: header;
+	width: 100%;
+}
+
+.site-main {
+	grid-area: main;
+	overflow: hidden; 
+}
+
+.widget-area .sidebar-left {
+	grid-area: sidebar-left;
+
+}
+
+.widget-area .sidebar-woo {
+	grid-area: sidebar-left;
+
+}
+
+.widget-area .sidebar-right {
+	grid-area: sidebar-right;
+
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
+@import "no-sidebar";

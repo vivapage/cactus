@@ -1,0 +1,43 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+}
+
+ul.w3all_ul_widgetLastTopics {
+	padding: 0;
+}
+
+.topic a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+li.w3all_li_widgetLastTopics {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+}
+
+.topicinfo {
+	font-size: .8em;
+	color: #888;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0;
+}
+
+.cat-item {
+	list-style-type: none;
+	margin: 0 0 5px 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	a {
+		text-decoration: none;
+	}
+}

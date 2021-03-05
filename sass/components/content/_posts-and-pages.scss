@@ -1,0 +1,83 @@
+.sticky {
+	display: block;
+}
+#page {
+	@include mq('iphone5') {
+		margin-top: 35px;
+	}
+	@include mq('tablet-small') {
+	margin-top: 40px;
+	}
+}
+.post,
+.page {
+	//margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.posted-on {
+	font-size: .8em;
+	a {
+		text-decoration: none;
+	}
+}
+
+.display-posts-listing.grid {
+	display: grid;
+	grid-gap: 15px;
+}
+
+.display-posts-listing.grid .title {
+	display: block;
+	line-height: .8em;
+	margin: 5px 0;
+	a {
+	text-decoration: none;
+	font-size: .7em;
+	color: $color__link;
+	}
+}
+
+.display-posts-listing.grid img { 
+	display: block; 
+	max-width: 100%; 
+	height: auto; 
+	border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+}
+
+@media (min-width: 1024px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 4, 1fr );
+	}
+}
+
+.wp-caption-text {
+	font-size: .9em;
+	color: #555;
+}
+
+.author-story {
+	text-align: right;
+	font-style: italic;
+	margin: 0 30px 10px 0;
+}
