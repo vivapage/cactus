@@ -22,6 +22,7 @@ get_header();
 				array(
 					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'cactus' ) . '</span> <span class="nav-title">%title</span>',
 					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'cactus' ) . '</span> <span class="nav-title">%title</span>',
+					'in_same_term' => true,
 				)
 			);
 

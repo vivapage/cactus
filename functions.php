@@ -54,10 +54,7 @@ if (!function_exists('cactus_setup')) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__('Primary', 'cactus'),
-				'menu-2' => esc_html__('Top menu', 'cactus'),
-				'menu-3' => esc_html__('Footer menu', 'cactus'),
 				'social' => esc_html__('Social Menu', 'cactus'),
-				'botsady' => esc_html__('Botsady', 'cactus'),
 			)
 		);
 
@@ -201,6 +198,61 @@ function custom_sidebars()
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title dokan">',
 		'after_title'   => '</h2>',
+	);
+	register_sidebar($args);
+
+	$args = array(
+		'id'            => 'sidebar-spravochnik',
+		'name'          => __('Spravochnik sidebar', 'cactus'),
+		'description'   => esc_html__('Add widgets here.', 'cactus'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	);
+	register_sidebar($args);
+
+	$args = array(
+		'id'            => 'sidebar-footer1',
+		'name'          => __('Footer sidebar 1', 'cactus'),
+		'description'   => esc_html__('Add widgets here.', 'cactus'),
+		'before_widget' => '<aside class="widget footer-widget %s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title footer">',
+		'after_title'   => '</h4>',
+	);
+	register_sidebar($args);
+
+	$args = array(
+		'id'            => 'sidebar-footer2',
+		'name'          => __('Footer sidebar 2', 'cactus'),
+		'description'   => esc_html__('Add widgets here.', 'cactus'),
+		'before_widget' => '<aside class="widget footer-widget %s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title footer">',
+		'after_title'   => '</h4>',
+	);
+	register_sidebar($args);
+
+	$args = array(
+		'id'            => 'sidebar-footer3',
+		'name'          => __('Footer sidebar 3', 'cactus'),
+		'description'   => esc_html__('Add widgets here.', 'cactus'),
+		'before_widget' => '<aside class="widget footer-widget %s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title footer">',
+		'after_title'   => '</h4>',
+	);
+	register_sidebar($args);
+
+	$args = array(
+		'id'            => 'sidebar-footer4',
+		'name'          => __('Footer sidebar 4', 'cactus'),
+		'description'   => esc_html__('Add widgets here.', 'cactus'),
+		'before_widget' => '<aside class="widget footer-widget %s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title footer">',
+		'after_title'   => '</h4>',
 	);
 	register_sidebar($args);
 }
@@ -408,13 +460,3 @@ function my_scripts_method()
 }
 
 add_action('wp_enqueue_scripts', 'my_scripts_method');
-
-
-function cactus_share_buttons()
-{
-	$share_url      = urlencode(get_the_permalink());
-	$share_title    = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
-	$media          = urlencode(get_the_post_thumbnail_url(get_the_ID(), 'full'));
-
-	include(locate_template('social-share.php', false, false));
-}

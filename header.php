@@ -18,6 +18,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
   <?php wp_head(); ?>
 
@@ -45,11 +46,11 @@
   <?php
   if (is_front_page()) :
   ?>
-  <div id="page" class="site frontpage">
+    <div id="page" class="site frontpage">
     <?php
   else :
     ?>
-    <div id="page" class="site">
+      <div id="page" class="site">
       <?php
     endif;
       ?>
@@ -60,21 +61,19 @@
           the_custom_logo();
           if (is_front_page() && is_home()) :
           ?>
-          <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-              rel="home"><?php bloginfo('name'); ?></a>
-          </h1>
+            <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+            </h1>
           <?php
           else :
           ?>
-          <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-              rel="home"><?php bloginfo('name'); ?></a>
-          </p>
+            <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+            </p>
           <?php
           endif;
           $cactus_description = get_bloginfo('description', 'display');
           if ($cactus_description || is_customize_preview()) :
           ?>
-          <p class="site-description"><?php echo $cactus_description; ?></p>
+            <p class="site-description"><?php echo $cactus_description; ?></p>
           <?php endif; ?>
         </div><!-- .site-branding -->
 

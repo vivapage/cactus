@@ -1,108 +1,157 @@
 a {
-	color: $color__link;
+  color: $color__link;
 
-	&:visited {
-		color: $color__link-visited;
-	}
+  &:visited {
+    color: $color__link-visited;
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
 
-	&:focus {
-		outline: thin dotted;
-	}
+  &:focus {
+    outline: thin dotted;
+  }
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
-
-
-.social-share-button {
-	font-size: 0.7rem;
-	line-height: 0.7rem;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin: 0 0 60px;
-	z-index: 2;
-	position: relative;
-	text-align: center;
-	list-style-type: none;
-	padding: 0;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-content: flex-start;
-}
-
-.social-share-button li {
-	height: auto;
-	flex: 0 1 auto;
-	width: calc(25% - 1px);
-	margin-right: 1px;
-}
-
-.social-share-button li:last-child {
-	width: 25%;
-	margin-right: 0;
-}
-
-.social-share-button svg {
-	fill: #fff;
-	margin-right: 5px;
-	width: 16px;
-	height: 16px;
-}
-
-.share-googleplus svg {
-	width: 20px;
-	height: 16px;
-}
-
-.social-share-button a {
-	display: block;
-	padding: 12px 12px 10px;
-	text-align: center;
-	color: #fff;
-	font-size: .9rem;
-	letter-spacing: 5px;
-	margin-right: 10px;
-}
-
-.social-share-button li:first-child a {
-	border-radius: 3px 0 0 3px;
-}
-
-.social-share-button li:last-child a {
-	border-radius: 0 3px 3px 0;
-}
-
-.share-twitter	{
-	background: #1da1f2;
-}
-
-.share-facebook	{
-	background: #3b5998;
-}
-
-.share-telegram	{
-	background: #0088cc;
-}
-
-.share-linkedin	{
-	background: #b5071a;
-}
-
-.share-pinterest {
-	background: #c8232c;
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 .entry-footer {
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.inline-share-tools {
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.inline-share-btn {
+  box-sizing: border-box;
+  border-left: 1px solid #d6d6d6;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  outline: 0;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+}
+a.fa.fa-facebook.inline-share-btn {
+  color: #3b5998;
+  text-decoration: none;
+}
+a.fa.fa-twitter.inline-share-btn {
+  color: #55acee;
+  text-decoration: none;
+}
+a.fa.fa-telegram.inline-share-btn {
+  color: #279fd3;
+  text-decoration: none;
+}
+a.fa.fa-linkedin.inline-share-btn {
+  color: #007bb5;
+  text-decoration: none;
+}
+a.fab.fa-viber.inline-share-btn {
+  color: #7360f2;
+  text-decoration: none;
+}
+a.fa.fa-whatsapp.inline-share-btn {
+  color: #25d366;
+  text-decoration: none;
+}
+
+ul.social-icons {
+  margin-top: 3px;
+}
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+}
+.social-icons a {
+  //color: #fff;
+  text-decoration: none;
+}
+.fa-facebook {
+  padding: 5px 8px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-facebook:hover {
+  background-color: #3d5b99;
+  color: #fff;
+}
+.fa-twitter {
+  padding: 5px 6px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-twitter:hover {
+  background-color: #00aced;
+  color: #fff;
+}
+.fa-rss {
+  padding: 5px 7px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-rss:hover {
+  background-color: #eb8231;
+  color: #fff;
+}
+.fa-youtube {
+  padding: 5px 6px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-youtube:hover {
+  background-color: #e64a41;
+  color: #fff;
+}
+
+.fa-vk {
+  padding: 5px 5px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-vk:hover {
+  background-color: #4c75a3;
+  color: #fff;
+}
+
+.fa-instagram {
+  padding: 5px 6px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-instagram:hover {
+  background-color: #e4405f;
+  color: #fff;
 }

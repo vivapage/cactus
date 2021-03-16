@@ -1,7 +1,6 @@
 body {
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
-	font-size: 15px;
-
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
+  font-size: 15px;
 }
 
 .block-editor-rich-text__editable {
@@ -11,137 +10,134 @@ body {
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 /* Make sure logo link wraps around logo image. */
 
 .site-branding {
-	display: grid;
-	grid-template-columns:  90px 1fr 30%;
-	justify-items: start;
-	grid-template-areas: "logo title description";
-	@include mq('iphone5') {
-		grid-template-areas: 
-		"logo title" 
-		"logo description";
-		grid-template-columns:  90px 1fr;
-	}
-	@include mq('tablet-small') {
-		grid-template-areas: "logo title description";
-	}
+  display: grid;
+  grid-template-columns: 90px 1fr 30%;
+  justify-items: start;
+  grid-template-areas: "logo title description";
+  @include mq("iphone5") {
+    grid-template-areas:
+      "logo title"
+      "logo description";
+    grid-template-columns: 90px 1fr;
+  }
+  @include mq("tablet-small") {
+    grid-template-areas: "logo title description";
+  }
 }
 
 .custom-logo-link {
-	grid-area: logo;
-	width: 80px;
-	height: 80px;
-	margin-right: 10px;
+  grid-area: logo;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
 }
 
-.site-title{
-	grid-area: title;
-	a {
-		font-weight: 700;
-		text-decoration: none;
-		color: #006000 !important;
-		text-shadow: 1px 1px 1px #fff,2px 2px 2px #006000;
-		}
-		@include mq('iphone5') {
-			font-size: 28px;
-		}
-		@include mq('phone-wide') {
-			font-size: 30px;
-		}
-		@include mq('tablet-small') {
-			font-size: 35px;
-		}
-		@include mq('tablet') {
-			font-size: 35px;
-		}
+.site-title {
+  grid-area: title;
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #006000 !important;
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #006000;
+  }
+  @include mq("iphone5") {
+    font-size: 28px;
+  }
+  @include mq("phone-wide") {
+    font-size: 30px;
+  }
+  @include mq("tablet-small") {
+    font-size: 35px;
+  }
+  @include mq("tablet") {
+    font-size: 35px;
+  }
 }
 
 .site-description {
-	grid-area: description;
-	color: #006000;
-	font-weight: 700;
-	@include mq('iphone5') {
-		font-size: 12px;
-		text-shadow:none;
-		font-weight: 300;
-		letter-spacing: -0.7px;
-	}
-	
-	@include mq('phone-wide') {
-		font-size: 14px;
-		text-shadow: 1px 1px 1px #fff,2px 2px 2px #006000;
-		font-weight: 700;
-		letter-spacing: nonormal;
-	}
-	@include mq('tablet-small') {
-		font-size: 14px;
-		text-shadow: 1px 1px 1px #fff,2px 2px 2px #006000;
-		font-weight: 700;
-		letter-spacing: nonormal;
-	}
-	@include mq('tablet') {
-		font-size: 16px;
-	}
+  grid-area: description;
+  color: #006000;
+  font-weight: 700;
+  @include mq("iphone5") {
+    font-size: 12px;
+    text-shadow: none;
+    font-weight: 300;
+    letter-spacing: -0.7px;
+  }
 
+  @include mq("phone-wide") {
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #006000;
+    font-weight: 700;
+    letter-spacing: nonormal;
+  }
+  @include mq("tablet-small") {
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #006000;
+    font-weight: 700;
+    letter-spacing: nonormal;
+  }
+  @include mq("tablet") {
+    font-size: 16px;
+  }
 }
 
 p.site-title {
-	
-	@include mq('iphone5') {
-		margin: 0;
-	}
-	@include mq('phone-wide') {
-		margin: 2px 0;
-	}
-	@include mq('tablet-small') {
-		margin: 8px 0;
-	}
+  @include mq("iphone5") {
+    margin: 0;
+  }
+  @include mq("phone-wide") {
+    margin: 2px 0;
+  }
+  @include mq("tablet-small") {
+    margin: 8px 0;
+  }
 }
 
 p.site-description {
-	
-	@include mq('iphone5') {
-		margin: 0 0 8px 0;
-	}
-	@include mq('tablet-small') {
-		margin: 26px 0;
-	}
+  @include mq("iphone5") {
+    margin: 0 0 8px 0;
+  }
+  @include mq("tablet-small") {
+    margin: 26px 0;
+  }
 }
 
 .topbutton {
-	height:50px;
-	width:50px;
-	position:fixed;
-	right:5px;
-	bottom:5px;
-	Z-index:1;
-	background-image:url("/images/angle-up-solid.svg");
-	background-repeat:no-repeat;
-	display:none;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 1;
+  background-image: url("/images/angle-up-solid.svg");
+  background-repeat: no-repeat;
+  display: none;
 }
 
 .footer-col.logo {
-	padding-top: 10px;
-	.slogan {
-		font-size: .9em;
-	}
+  padding-top: 10px;
+  .slogan {
+    font-size: 0.9em;
+  }
 }
 
 .logo-footer {
-	float: left;
-	width: 80px;
-	padding-right: 10px;
+  float: left;
+  width: 80px;
+  padding-right: 10px;
 }
-
+/*
 .grecaptcha-badge {
-	//visibility: hidden !important;
+  visibility: hidden !important;
 }
-
+*/

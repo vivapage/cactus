@@ -78,7 +78,7 @@ function news_post_type()
 		'description'           => __('News Description', 'cactus'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor'),
-		'taxonomies'            => array('category', 'post_tag'),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

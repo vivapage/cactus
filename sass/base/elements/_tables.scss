@@ -1,4 +1,40 @@
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border: none;
+}
+
+table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+
+table td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+  border-left: none;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+  border-right: none;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background: #fcfcfc;
+}
+
+table tbody tr td p {
+  margin: 0.1em;
 }

@@ -14,93 +14,108 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
-	box-shadow: 0 0 3px #ccc;
+  color: $color__text-input;
+  border: 1px solid $color__border-input;
+  border-radius: 3px;
+  padding: 3px;
+  box-shadow: 0 0 3px #ccc;
 
-	&:focus {
-		color: $color__text-input-focus;
-		outline: $color__link-hover;
-		border: 1px solid $color__link-hover;
-		border-radius: 3px;
-	}
+  &:focus {
+    color: $color__text-input-focus;
+    outline: $color__link-hover;
+    border: 1px solid $color__link-hover;
+    border-radius: 3px;
+  }
 }
 
 select {
-	border: 1px solid $color__border-input;
-	padding: 5px;
-	border-radius: 5px;
+  border: 1px solid $color__border-input;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 textarea {
-	width: 100%;
+  width: 100%;
 }
 
 fieldset {
-	padding: 0;
+  padding: 0;
 }
 
-.search-form input[type=text] {
-	width: 100%;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	font-size: 14px;
-	background-color: white;
-	background-image: url('images/searchicon.png');
-	background-position: 10px 10px; 
-	background-repeat: no-repeat;
-	padding: 5px 5px 5px 30px;
-	&:focus {
-		color: $color__text-input-focus;
-		outline: $color__link-hover;
-		border: 1px solid $color__link-hover;
-		border-radius: 3px;
-	}
+.search-form input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: white;
+  background-image: url("images/searchicon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 30px;
+  &:focus {
+    color: $color__text-input-focus;
+    outline: $color__link-hover;
+    border: 1px solid $color__link-hover;
+    border-radius: 3px;
+  }
 }
 
 .form-group {
-	position: relative;
-	padding-bottom: .5rem;
-	//max-width: 300px;
- }
+  position: relative;
+  padding-bottom: 0.5rem;
+  //max-width: 300px;
+}
 
 label {
-	display: block;
-	top: 0;
-	font-size: var(--font-size-small);
-	opacity: 1;
-	transform: translateY(0);
-	transition: all 0.2s ease-out;
- }
- 
- input:placeholder-shown + label {
-	opacity: 0;
-	transform: translateY(1rem);
- }
+  display: block;
+  top: 0;
+  font-size: var(--font-size-small);
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-out;
+}
 
- ul.loginform {
-	list-style:none;
-	margin:0px;
-	padding: 0;
-	font-size: .9em;
-	color: #a0a0a0;
-	i {
-		font-size: 1.2em;
-		color: #404040;
-	}
-	img {
-		float: left;
-		border-radius: 5px;
-		margin-right: 5px
-	}
- }
+input:placeholder-shown + label {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+ul.loginform {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  font-size: 0.9em;
+  color: #a0a0a0;
+  i {
+    font-size: 1.2em;
+    color: #404040;
+  }
+  img {
+    float: left;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+}
 div.menu-botsady-container select {
-	max-width: 320px;
-	option {
-	font-size: .8em;
-	width: 300px;
-	}
+  max-width: 320px;
+  option {
+    font-size: 0.8em;
+    width: 300px;
+  }
+}
+
+div.sendpress-signup-form
+  form#sendpress_signup.sendpress-signup
+  div#form-wrap
+  p {
+  padding: 0;
+  margin: 2px 0;
+}
+
+div.sendpress-signup-form
+  form#sendpress_signup.sendpress-signup
+  div#form-wrap
+  p:empty::before {
+  display: none;
 }

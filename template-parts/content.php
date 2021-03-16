@@ -24,7 +24,6 @@
     <div class="entry-meta">
       <?php
 				cactus_posted_on();
-				//cactus_posted_by();
 				?>
     </div><!-- .entry-meta -->
     <?php endif; ?>
