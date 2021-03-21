@@ -20,7 +20,7 @@
         КАКТУС КИЕВ виртуальный клуб любителей суккулентных растений
       </div>
     </div>
-    <div class="footer-col">
+    <div class="footer-col sections">
       <h4>Разделы</h4>
       <ul>
         <li><a href="/shop">Магазин</a></li>
@@ -31,7 +31,7 @@
       </ul>
       <?php if (dynamic_sidebar('sidebar-footer1')) : else : endif; ?>
     </div>
-    <div class="footer-col">
+    <div class="footer-col shopcat">
       <h4>Магазин</h4>
       <ul>
         <li><a href="/product-category/cacti/">Кактусы</a></li>
@@ -45,7 +45,7 @@
       </ul>
       <?php if (dynamic_sidebar('sidebar-footer2')) : else : endif; ?>
     </div>
-    <div class="footer-col">
+    <div class="footer-col support">
       <h4><?php esc_html_e('Support', 'cactus'); ?></h4>
       <ul>
         <li><a href="/contact"><?php esc_html_e('Contact Us', 'cactus') ?></a></li>
@@ -68,7 +68,7 @@
 
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col subscribe">
       <?php if (dynamic_sidebar('sidebar-footer4')) : else : endif; ?>
 
     </div>

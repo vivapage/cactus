@@ -1,30 +1,66 @@
 button,
+div.woocommerce
+  div.woocommerce-MyAccount-content
+  form.register
+  div.dokan-become-seller
+  p.form-row
+  input.dokan-btn.dokan-btn-default,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.wp-block-button__link {
-	border: none;
-	border-radius: 1.55em;
-	background: $color__background-button;
-	color: #fff;
-	line-height: 1;
-	padding: .667em 1.333em;
-	overflow-wrap: break-word;
-	font-size: 1.125em;
+.wp-block-button__link,
+a.btn {
+  border: none;
+  border-radius: 1.55em;
+  background: $color__background-button;
+  color: #fff;
+  line-height: 1;
+  padding: 0.4em 1.2em;
+  overflow-wrap: break-word;
+  font-size: 1.125em;
 
-	&:hover {
-		background: $color__link-hover;
-		border-radius: 1.55em;
-	}
+  &:hover {
+    background: $color__link-hover;
+    border-radius: 1.55em;
+  }
 
-	&:active,
-	&:focus {
-	  background: $color__link-hover;
-	  border-radius: 1.55em;
-	}
+  &:active,
+  &:focus {
+    background: $color__link-hover;
+    border-radius: 1.55em;
+  }
 }
 
 form.search-form fieldset {
-	margin: 0;
-	border: 0;
+  margin: 0;
+  border: 0;
+}
+
+div.media-frame-tab-panel
+  div.media-frame-router
+  div.media-router
+  button#menu-item-upload.media-menu-item.active {
+  color: #040404;
+  border-radius: 0;
+}
+div.media-frame-tab-panel
+  div.media-frame-router
+  div.media-router
+  button#menu-item-upload.media-menu-item {
+  color: #040404;
+  border-radius: 0;
+}
+div.media-frame-tab-panel
+  div.media-frame-router
+  div.media-router
+  button#menu-item-browse.media-menu-item {
+  color: #040404;
+}
+
+div.media-frame-tab-panel
+  div.media-frame-router
+  div.media-router
+  button#menu-item-browse.media-menu-item.active {
+  color: #040404;
+  border-radius: 0;
 }

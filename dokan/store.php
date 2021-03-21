@@ -15,6 +15,7 @@ $map_location = $store_user->get_location();
 $layout       = get_theme_mod('store_layout', 'left');
 
 get_header('shop');
+
 get_sidebar('vendor');
 
 if (function_exists('yoast_breadcrumb')) {
@@ -26,7 +27,7 @@ if (function_exists('yoast_breadcrumb')) {
 <div class="dokan-store-wrap layout-<?php echo esc_attr($layout); ?>">
 
   <?php if ('left' === $layout) { ?>
-  <?php dokan_get_template_part('store', 'sidebar', array('store_user' => $store_user, 'store_info' => $store_info, 'map_location' => $map_location));
+    <?php dokan_get_template_part('store', 'sidebar', array('store_user' => $store_user, 'store_info' => $store_info, 'map_location' => $map_location));
     ?>
   <?php } ?>
 
@@ -39,26 +40,26 @@ if (function_exists('yoast_breadcrumb')) {
 
       <?php if (have_posts()) { ?>
 
-      <div class="seller-items">
+        <div class="seller-items">
 
-        <?php woocommerce_product_loop_start(); ?>
+          <?php woocommerce_product_loop_start(); ?>
 
-        <?php while (have_posts()) : the_post(); ?>
+          <?php while (have_posts()) : the_post(); ?>
 
-        <?php wc_get_template_part('content', 'product'); ?>
+            <?php wc_get_template_part('content', 'product'); ?>
 
-        <?php endwhile; // end of the loop. 
+          <?php endwhile; // end of the loop. 
           ?>
 
-        <?php woocommerce_product_loop_end(); ?>
+          <?php woocommerce_product_loop_end(); ?>
 
-      </div>
+        </div>
 
-      <?php dokan_content_nav('nav-below'); ?>
+        <?php dokan_content_nav('nav-below'); ?>
 
       <?php } else { ?>
 
-      <p class="dokan-info"><?php esc_html_e('No products were found of this vendor!', 'dokan-lite'); ?></p>
+        <p class="dokan-info"><?php esc_html_e('No products were found of this vendor!', 'dokan-lite'); ?></p>
 
       <?php } ?>
     </div>
@@ -66,11 +67,16 @@ if (function_exists('yoast_breadcrumb')) {
   </div><!-- .dokan-single-store -->
 
   <?php if ('right' === $layout) { ?>
-  <?php dokan_get_template_part('store', 'sidebar', array('store_user' => $store_user, 'store_info' => $store_info, 'map_location' => $map_location)); ?>
+    <?php dokan_get_template_part('store', 'sidebar', array('store_user' => $store_user, 'store_info' => $store_info, 'map_location' => $map_location));
+    ?>
   <?php } ?>
 
 </div><!-- .dokan-store-wrap -->
 
 <?php do_action('woocommerce_after_main_content'); ?>
+<?php
+$post_type = get_post_type($post_id);
+echo $post_type;
+?>
 
 <?php get_footer('shop'); ?>

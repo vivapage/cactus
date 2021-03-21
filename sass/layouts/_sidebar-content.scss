@@ -27,7 +27,19 @@
     grid-template-columns: 100%;
   }
 }
-.site-info,
+
+.site.product {
+  @include mq("iphone5") {
+    width: 320px;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-columns: 100%;
+  }
+}
+
 .copyright {
   @include mq("iphone5") {
     width: 320px;
@@ -35,23 +47,46 @@
   }
 }
 
+.site-info {
+  @include mq("iphone5") {
+    width: 320px;
+    grid-template-areas:
+      "sections shopcat"
+      "support subscribe"
+      "logo logo";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .site,
-.site-info,
-.copyright {
+.copyright,
+.site.product {
+  @include mq("phone") {
+    width: 400px;
+  }
+}
+
+.site-info {
+  @include mq("iphone5") {
+    padding: 0 10px;
+  }
   @include mq("phone") {
     width: 400px;
   }
 }
 .site,
 .site-info,
-.copyright {
+.copyright,
+.site.product {
   @include mq("phone-wide") {
     width: 480px;
+    padding: 0;
   }
 }
 .site,
 .site-info,
-.copyright {
+.copyright,
+.site.product {
   @include mq("phablet") {
     width: 550px;
   }
@@ -59,12 +94,14 @@
 
 .site,
 .site-info,
-.copyright {
+.copyright,
+.site.product {
   @include mq("tablet-small") {
     width: 620px;
   }
 }
-.site {
+.site,
+.site.product {
   @include mq("tablet") {
     width: 750px;
     grid-template-columns: 1fr min-content;
@@ -77,13 +114,15 @@
 .site-info {
   @include mq("tablet") {
     width: 750px;
+    grid-template-areas: "logo sections shopcat support subscribe";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
 .site,
 .site-info,
-.copyright {
+.copyright,
+.site.product {
   @include mq("tablet-wide") {
     width: 1000px;
   }
@@ -91,7 +130,8 @@
 
 .site,
 .site-info,
-.copyright {
+.copyright,
+.site.product {
   @include mq("desktop") {
     width: 1200px;
   }
@@ -105,7 +145,8 @@
 
 .site,
 .site-info,
-.copyright {
+.copyright,
+.site.product {
   @include mq("desktop-wide") {
     width: 1400px;
   }
@@ -145,6 +186,24 @@ div#page.site.frontpage {
 
 .widget-area .sidebar-right {
   grid-area: sidebar-right;
+}
+
+.footer-col {
+  &.logo {
+    grid-area: logo;
+  }
+  &.sections {
+    grid-area: sections;
+  }
+  &.shopcat {
+    grid-area: shopcat;
+  }
+  &.support {
+    grid-area: support;
+  }
+  &.subscribe {
+    grid-area: subscribe;
+  }
 }
 
 .footer-col h4 {

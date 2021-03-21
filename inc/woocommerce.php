@@ -340,3 +340,45 @@ function custom_woocommerce_template_loop_category_title($category)
 	</div>
 <?php
 }
+
+
+
+add_filter('product_type_selector', 'misha_remove_grouped_and_external');
+
+function misha_remove_grouped_and_external($product_types)
+{
+
+	unset($product_types['grouped']);
+	unset($product_types['external']);
+	unset($product_types['variable']);
+
+	return $product_types;
+}
+
+add_filter('product_type_options', function ($options) {
+
+	// remove "Virtual" checkbox
+	if (isset($options['virtual'])) {
+		unset($options['virtual']);
+	}
+
+	// remove "Downloadable" checkbox
+	if (isset($options['downloadable'])) {
+		unset($options['downloadable']);
+	}
+
+	return $options;
+});
+
+$postType = "product";
+
+add_action("save_post_" . $postType, function ($post_ID, \WP_Post $post, $update) {
+
+	if (!$update) {
+		// default values for new products
+		update_post_meta($post->ID, "_manage_stock", "yes");
+		update_post_meta($post->ID, "_stock", 1);
+		return;
+	}
+	// here, operations for updated products
+}, 10, 3);

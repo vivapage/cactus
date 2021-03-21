@@ -14,13 +14,8 @@ if (!is_active_sidebar('sidebar-woo')) {
 ?>
 
 <aside id="secondary" class="widget-area sidebar">
-  <?php dynamic_sidebar('sidebar-woo'); ?>
-  <?php
-  if (wp_is_mobile()) {
-    dynamic_sidebar('sidebar-shop-mobile');
-  } else {
-    dynamic_sidebar('sidebar-shop');
-  }
+  <?php dynamic_sidebar('sidebar-woo');
+
   echo '<h2 class="widget-title">Продавцы</h2>';
   echo '<div class="widget-inner">';
   $args = array(
@@ -41,6 +36,7 @@ if (!is_active_sidebar('sidebar-woo')) {
   echo '</optgroup>';
   echo '</select>';
   echo '</div>';
+  dynamic_sidebar('sidebar-woo2');
   ?>
 
 </aside><!-- #secondary -->

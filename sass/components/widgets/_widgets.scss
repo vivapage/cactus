@@ -1,43 +1,89 @@
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+  // Make sure select elements fit in widgets.
+  select {
+    max-width: 100%;
+  }
 }
 
 ul.w3all_ul_widgetLastTopics {
-	padding: 0;
+  padding: 0;
 }
 
 .topic a {
-	font-weight: 700;
-	text-decoration: none;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 li.w3all_li_widgetLastTopics {
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 2px;
-	padding-bottom: 2px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
 }
 
 .topicinfo {
-	font-size: .8em;
-	color: #888;
+  font-size: 0.8em;
+  color: #888;
 }
 
 .widget ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .cat-item {
-	list-style-type: none;
-	margin: 0 0 5px 5px;
-	padding-bottom: 5px;
-	border-bottom: 1px solid #ccc;
-	a {
-		text-decoration: none;
-	}
+  list-style-type: none;
+  margin: 0 0 5px 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  a {
+    text-decoration: none;
+  }
+}
+
+h2.widget-title.menu {
+  line-height: 0;
+}
+
+.widget.widget_maxmegamenu h2.widget-title {
+  display: none;
+  @include mq("tablet") {
+    display: inherit;
+  }
+}
+
+.title-menu {
+  text-shadow: 0 5px 10px rgba(14, 27, 35, 0.25);
+  font-weight: 300;
+  font-size: 1.5em;
+  color: #404040;
+}
+
+.widget.widget_tag_cloud,
+.widget.woocommerce.widget_product_tag_cloud,
+.widget.woocommerce.widget_product_tag_cloud,
+.widget.woocommerce.widget_recently_viewed_products {
+  display: none;
+  @include mq("tablet") {
+    display: inherit;
+  }
+}
+
+h2.widget-title,
+.entry-content h2 {
+  /* &::before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    margin-right: 3px;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://www.cactuskiev.com.ua/images/cactus2.svg);
+
+  }
+  */
+  border-bottom: 8px rgb(236, 235, 235) solid;
 }

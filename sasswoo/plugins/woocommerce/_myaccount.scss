@@ -1,97 +1,143 @@
 .woocommerce-account .woocommerce-MyAccount-navigation {
-	width: 20%;
+  width: 100%;
   float: left;
-}
 
+  @include mq("phone") {
+    width: 100%;
+  }
+  @include mq("tablet") {
+    width: 20%;
+  }
+}
 .woocommerce-account .woocommerce-MyAccount-content {
   display: inline-block;
   float: left;
-  margin-left: 5%;
-  width: 75%;
+  //margin-left: 5%;
+  width: 100%;
+  @include mq("tablet") {
+    width: 75%;
+    margin-left: 5%;
+  }
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul {
-    padding: 0;
-	border-top: 1px solid #ccc;
+  padding: 0;
+  border-top: 1px solid #ccc;
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul li {
-	list-style: none;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0;
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a:before {
-	opacity: 1;
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.is-active
+  a:before {
+  opacity: 1;
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul li a {
-	padding: 10px 5px;
-	display: block;
+  padding: 10px 5px;
+  display: block;
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul li a:before {
-	margin-right: 20px;
-    opacity: .25;
+  margin-right: 20px;
+  opacity: 0.25;
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:before {
-	opacity: 1;
+  opacity: 1;
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:before {
-    font-family: 'FontAwesome';
-	content: "\f0e4";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--dashboard
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f0e4";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:before {
-    font-family: 'FontAwesome';
-	content: "\f291";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--orders
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f291";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads a:before {
-    font-family: 'FontAwesome';
-	content: "\f1c6";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--downloads
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f1c6";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a:before {
-    font-family: 'FontAwesome';
-	content: "\f015";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--edit-address
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f015";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--payment-methods a:before {
-    font-family: 'FontAwesome';
-	content: "\f09d";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--payment-methods
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f09d";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:before {
-    font-family: 'FontAwesome';
-	content: "\f007";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--edit-account
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f007";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:before {
-    font-family: 'FontAwesome';
-	content: "\f08b";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--customer-logout
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f08b";
 }
 
-.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--auctions-endpoint a:before {
-    font-family: 'FontAwesome';
-	content: "\f0e3";
+.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--auctions-endpoint
+  a:before {
+  font-family: "FontAwesome";
+  content: "\f0e3";
 }
 
 .woocommerce-account .woocommerce-MyAccount-content h2 {
-	font-size: 25px;
-    text-align: center;
-	font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .woocommerce-account p.order-again {
-    text-align: right;
+  text-align: right;
 }
 
 .woocommerce-account .woocommerce-EditAccountForm input[type="submit"] {
-    margin-top: 50px;
-    float: right;
+  margin-top: 50px;
+  float: right;
 }
 
 div.woocommerce nav.woocommerce-MyAccount-navigation ul {
@@ -108,4 +154,123 @@ ul.dokan-dashboard-menu li.withdraw {
 
 ul.dokan-dashboard-menu li.payment {
   display: none;
+}
+
+ul.dokan-account-migration-lists {
+  background-color: #fff;
+}
+
+@include mq("phone") {
+  div.woocommerce-MyAccount-content ul.dokan-account-migration-lists li {
+    display: block;
+  }
+  div.woocommerce-MyAccount-content
+    ul.dokan-account-migration-lists
+    li
+    div.dokan-w8.left-content {
+    width: 100% !important;
+    float: none !important;
+    display: block !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  div.woocommerce-MyAccount-content
+    ul.dokan-account-migration-lists
+    li
+    div.dokan-w4.right-content {
+    width: 90% !important;
+    float: none !important;
+    display: block !important;
+    //overflow: hidden !important;
+    position: relative !important;
+    padding: 20px;
+    text-align: center !important;
+  }
+}
+
+@include mq("tablet-wide") {
+  div.woocommerce-MyAccount-content ul.dokan-account-migration-lists li {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  div.woocommerce-MyAccount-content
+    ul.dokan-account-migration-lists
+    li
+    div.dokan-w8.left-content {
+    width: 58.33333333% !important;
+  }
+  div.woocommerce-MyAccount-content
+    ul.dokan-account-migration-lists
+    li
+    div.dokan-w4.right-content {
+    width: 33.33333333% !important;
+    text-align: right !important;
+    flex: 1 !important;
+    float: left;
+  }
+}
+
+.dokan-dashboard .dokan-dash-sidebar,
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu {
+  background: transparent !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li a {
+  color: #040404 !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active a {
+  color: #fff !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active {
+  background-color: #006000 !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active::after {
+  left: 94% !important;
+  border-color: transparent #f5f5f6 transparent transparent !important;
+  border-left-color: #f5f5f6 !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li:hover {
+  background: #006000 !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li a:hover {
+  color: #fff !important;
+}
+
+input[type="submit"].dokan-btn-theme,
+a.dokan-btn-theme,
+.dokan-btn-theme {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+input[type="submit"].dokan-btn,
+a.dokan-btn,
+.dokan-btn {
+  border-radius: 30px !important;
+}
+
+.dokan-dashboard .dokan-dash-sidebar #dokan-navigation > #mobile-menu-icon {
+  color: #040404 !important;
+}
+
+.dokan-dashboard .dokan-dash-sidebar #dokan-navigation > #mobile-menu-icon {
+  top: 3px !important;
+  border-color: #ccc !important;
+}
+
+.dokan-progress-bar {
+  color: #040404 !important;
+}
+@media only screen and (max-width: 450px) {
+  .dokan-dashboard .dokan-dash-sidebar #dokan-navigation {
+    background: #fff !important;
+    border: #ccc 1px solid !important;
+    border-radius: 5px;
+    height: 40px !important;
+  }
+  .dokan-dashboard .dokan-dash-sidebar,
+  .dokan-dashboard .dokan-dashboard-content {
+    padding: 10px !important;
+  }
 }

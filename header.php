@@ -50,7 +50,8 @@
     <?php
   else :
     ?>
-      <div id="page" class="site">
+      <div id="page" class="site <?php $post_type = get_post_type($post_id);
+                                  echo $post_type; ?>">
       <?php
     endif;
       ?>
