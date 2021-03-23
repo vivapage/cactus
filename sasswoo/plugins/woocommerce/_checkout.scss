@@ -1,21 +1,52 @@
 @media screen and (min-width: 768px) {
+  .col2-set {
+    .col-1 {
+      float: left;
+      margin-right: $columns__margin;
+    }
 
-	.col2-set {
+    .col-2 {
+      float: right;
+      margin-right: 0;
+    }
 
-		.form-row-first {
-			float: left;
-			margin-right: $columns__margin;
-		}
+    .col-1,
+    .col-2 {
+      @include column-width(2);
+    }
+  }
+}
 
-		.form-row-last {
-			float: right;
-			margin-right: 0;
-		}
+.wc-proceed-to-checkout {
+  margin: 20px 0;
+}
 
-		.form-row-first,
-		.form-row-last {
+h1.entry-title small {
+  white-space: nowrap;
+}
 
-			@include column-width(2);
-		}
-	}
+ul#shipping_method.woocommerce-shipping-methods li {
+  display: flex;
+  input {
+    margin-right: 5px;
+  }
+  @media screen and (max-width: 768px) {
+    display: inline-flex;
+  }
+}
+
+.payment_method_cod label {
+  font-weight: 700;
+}
+
+div.payment_box.payment_method_cod p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+a.remove {
+  font-size: 2em;
+  font-weight: 700;
+  color: red;
+  text-decoration: none;
 }

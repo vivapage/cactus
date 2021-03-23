@@ -47,7 +47,7 @@ body {
     font-weight: 700;
     text-decoration: none;
     color: #006000 !important;
-    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #006000;
+    text-shadow: 0 5px 10px rgba(14, 27, 35, 0.25);
   }
   @include mq("iphone5") {
     font-size: 28px;
@@ -67,22 +67,20 @@ body {
   grid-area: description;
   color: #006000;
   font-weight: 700;
+
   @include mq("iphone5") {
     font-size: 12px;
     text-shadow: none;
     font-weight: 300;
     letter-spacing: -0.7px;
   }
-
   @include mq("phone-wide") {
     font-size: 14px;
-    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #006000;
     font-weight: 700;
     letter-spacing: nonormal;
   }
   @include mq("tablet-small") {
     font-size: 14px;
-    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #006000;
     font-weight: 700;
     letter-spacing: nonormal;
   }
@@ -104,6 +102,7 @@ p.site-title {
 }
 
 p.site-description {
+  text-shadow: 0 5px 10px rgba(14, 27, 35, 0.25);
   @include mq("iphone5") {
     margin: 0 0 8px 0;
   }

@@ -9,7 +9,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .wp-block-button__link,
-a.btn {
+a.btn,
+a.checkout-button {
   border: none;
   border-radius: 1.55em;
   background: $color__background-button;
@@ -18,6 +19,7 @@ a.btn {
   padding: 0.4em 1.2em;
   overflow-wrap: break-word;
   font-size: 1.125em;
+  text-decoration: none;
 
   &:hover {
     background: $color__link-hover;
@@ -63,4 +65,14 @@ div.media-frame-tab-panel
   button#menu-item-browse.media-menu-item.active {
   color: #040404;
   border-radius: 0;
+}
+
+div.dokan-attribute-type
+  a.dokan-btn.dokan-btn-default.dokan-btn-theme.dokan-save-attribute {
+  color: #fff !important;
+}
+
+div.dokan-form-group.dokan-right
+  button.dokan-btn.dokan-btn-default.dokan-btn-theme {
+  color: #fff !important;
 }

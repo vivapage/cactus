@@ -74,9 +74,6 @@ if (function_exists('yoast_breadcrumb')) {
 </div><!-- .dokan-store-wrap -->
 
 <?php do_action('woocommerce_after_main_content'); ?>
-<?php
-$post_type = get_post_type($post_id);
-echo $post_type;
-?>
+
 
 <?php get_footer('shop'); ?>

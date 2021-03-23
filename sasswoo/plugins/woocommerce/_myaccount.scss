@@ -148,11 +148,9 @@ ul li.woocommerce-MyAccount-navigation-link a {
   text-decoration: 0;
 }
 
-ul.dokan-dashboard-menu li.withdraw {
-  display: none;
-}
-
-ul.dokan-dashboard-menu li.payment {
+div#dokan-navigation ul.dokan-dashboard-menu li.withdraw,
+div#dokan-navigation ul.dokan-dashboard-menu li.payment,
+div#dokan-navigation ul.dokan-dashboard-menu li.coupons {
   display: none;
 }
 

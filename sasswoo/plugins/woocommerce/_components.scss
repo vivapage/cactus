@@ -207,12 +207,23 @@ p.stars {
 /**
  * Notices
  */
-.woocommerce-message,
+
 .woocommerce-info,
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
   background-color: $woocommerce__color-success;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  clear: both;
+}
+
+.woocommerce-message {
+  background-color: khaki;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
   clear: both;
 }
 
