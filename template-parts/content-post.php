@@ -30,7 +30,6 @@
 					<a class="fa fa-telegram inline-share-btn" data-mobile_iframe="true" title="Share on telegram " href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title()); ?>+<?php echo get_permalink(); ?>" onclick="window.open(this.href, 'sharegplus', 'height=400,width=600'); return false;" target="_blank"></a>
 					<a class="fa fa-twitter inline-share-btn" title="Share on twitter " href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title()); ?>+<?php echo get_permalink(); ?>" onclick="window.open(this.href, 'sharegplus', 'height=400,width=600'); return false;" target="_blank"></a>
 					<a class="fa fa-linkedin inline-share-btn" title="Share on linkedin " href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_permalink()); ?>&amp;title=<?php echo urlencode(get_the_title()); ?>" onclick="window.open(this.href, 'sharegplus', 'height=400,width=600'); return false;" target="_blank"></a>
-					<a class="fab fa-viber inline-share-btn" data-mobile_iframe="true" title="Share on viber " href="viber://forward?text=<?php echo urlencode(get_the_title()); ?> <?php echo urlencode(get_permalink()); ?>"></a>
 					<a class="fa fa-whatsapp inline-share-btn" data-mobile_iframe="true" title="Share on whatsapp " href="whatsapp://send?text=<?php echo urlencode(get_the_title()); ?> <?php echo urlencode(get_permalink()); ?>"></a>
 				</div>
 

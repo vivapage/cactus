@@ -372,3 +372,8 @@ span.onsale {
 .dokan-form-group.hidden.dokan-product-type-container {
   display: none;
 }
+
+li#tab-title-shipping,
+div#dokan-navigation ul.dokan-dashboard-menu li.shipping {
+  display: none !important;
+}

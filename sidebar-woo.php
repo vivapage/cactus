@@ -20,8 +20,9 @@ if (!is_active_sidebar('sidebar-woo')) {
   echo '<div class="widget-inner">';
   $args = array(
     'role'    => 'seller',
-    'orderby' => 'meta_value',
-    'meta_key' => 'dokan_store_name',
+    'orderby' => 'dokan_store_name',
+    'meta_key' => 'dokan_enable_selling',
+    'meta_value'   => 'yes',
     'order'   => 'ASC',
     'fields' => 'all_with_meta'
   );

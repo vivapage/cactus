@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: cactus\n"
-"POT-Creation-Date: 2021-01-18 16:55+0200\n"
-"PO-Revision-Date: 2021-01-18 16:55+0200\n"
+"POT-Creation-Date: 2021-03-29 14:58+0300\n"
+"PO-Revision-Date: 2021-03-29 14:58+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -19,26 +19,25 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: 404.php:17
+#: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
+#: 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:30
+#: 404.php:32
 msgid "Most Used Categories"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:48
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
+#: category.php:53 tag.php:53
+msgid "Posts navigation"
 msgstr ""
 
 #. translators: 1: title.
@@ -60,110 +59,261 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:16
+#: footer-old.php:16
 msgid "https://wordpress.org/"
 msgstr ""
 
 #. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:19
+#: footer-old.php:19
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
 #. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
+#: footer-old.php:25
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:55
+#: footer.php:49
+msgid "Support"
+msgstr ""
+
+#: footer.php:51
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php:56
+msgid "Follow us on"
+msgstr ""
+
+#: functions.php:56
 msgid "Primary"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:57
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:133
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:133 functions.php:150 functions.php:161
+#: functions.php:135 functions.php:152 functions.php:163 functions.php:174
+#: functions.php:185 functions.php:196 functions.php:207 functions.php:218
+#: functions.php:229 functions.php:240 functions.php:251 functions.php:262
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:149
+#: functions.php:151
 msgid "Front_left"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:162
 msgid "Front_right"
 msgstr ""
 
-#: header.php:26
-msgid "Skip to content"
+#: functions.php:173
+msgid "Woo sidebar"
 msgstr ""
 
-#: header.php:49
-msgid "Primary Menu"
+#: functions.php:184
+msgid "Woo2 sidebar"
 msgstr ""
 
-#. translators: %s: post date.
-#: inc/template-tags.php:30
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
+#: functions.php:195
+msgid "Vendor sidebar"
+msgstr ""
+
+#: functions.php:206
+msgid "Store sidebar"
+msgstr ""
+
+#: functions.php:217
+msgid "Spravochnik sidebar"
+msgstr ""
+
+#: functions.php:228
+msgid "Footer sidebar 1"
+msgstr ""
+
+#: functions.php:239
+msgid "Footer sidebar 2"
+msgstr ""
+
+#: functions.php:250
+msgid "Footer sidebar 3"
+msgstr ""
+
+#: functions.php:261
+msgid "Footer sidebar 4"
+msgstr ""
+
+#: inc/template-functions.php:48
+msgctxt "Post Type General Name"
+msgid "News"
+msgstr ""
+
+#: inc/template-functions.php:49
+msgctxt "Post Type Singular Name"
+msgid "News"
+msgstr ""
+
+#: inc/template-functions.php:50 inc/template-functions.php:51
+#: inc/template-functions.php:77
+msgid "News"
+msgstr ""
+
+#: inc/template-functions.php:52
+msgid "News Archives"
+msgstr ""
+
+#: inc/template-functions.php:53
+msgid "News Attributes"
+msgstr ""
+
+#: inc/template-functions.php:54
+msgid "Parent News:"
+msgstr ""
+
+#: inc/template-functions.php:55
+msgid "All News"
+msgstr ""
+
+#: inc/template-functions.php:56 inc/template-functions.php:57
+msgid "Add New News"
+msgstr ""
+
+#: inc/template-functions.php:58
+msgid "New News"
+msgstr ""
+
+#: inc/template-functions.php:59
+msgid "Edit News"
+msgstr ""
+
+#: inc/template-functions.php:60
+msgid "Update News"
+msgstr ""
+
+#: inc/template-functions.php:61 inc/template-functions.php:62
+msgid "View News"
+msgstr ""
+
+#: inc/template-functions.php:63
+msgid "Search News"
+msgstr ""
+
+#: inc/template-functions.php:64
+msgid "Not found"
+msgstr ""
+
+#: inc/template-functions.php:65
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/template-functions.php:66
+msgid "Featured Image"
+msgstr ""
+
+#: inc/template-functions.php:67
+msgid "Set featured image"
+msgstr ""
+
+#: inc/template-functions.php:68
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/template-functions.php:69
+msgid "Use as featured image"
+msgstr ""
+
+#: inc/template-functions.php:70
+msgid "Insert into item"
+msgstr ""
+
+#: inc/template-functions.php:71
+msgid "Uploaded to this item"
+msgstr ""
+
+#: inc/template-functions.php:72
+msgid "Items list"
+msgstr ""
+
+#: inc/template-functions.php:73
+msgid "Items list navigation"
+msgstr ""
+
+#: inc/template-functions.php:74
+msgid "Filter items list"
+msgstr ""
+
+#: inc/template-functions.php:78
+msgid "News Description"
 msgstr ""
 
 #. translators: %s: post author.
-#: inc/template-tags.php:46
+#: inc/template-tags.php:48
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:63
+#: inc/template-tags.php:66 template-parts/content-all-post.php:29
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:66
+#: inc/template-tags.php:69
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:70
+#: inc/template-tags.php:73 template-parts/content-all-post.php:36
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:73
+#: inc/template-tags.php:76
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:83
+#: inc/template-tags.php:86
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:100 template-parts/content-page.php:39
+#: inc/template-tags.php:103 template-parts/content-frontpage.php:35
+#: template-parts/content-page.php:39
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/woocommerce.php:184
+#: inc/woocommerce.php:194 inc/woocommerce11.php:193
 msgid "View your shopping cart"
 msgstr ""
 
 #. translators: number of items in the mini cart.
-#: inc/woocommerce.php:188
+#: inc/woocommerce.php:198 inc/woocommerce11.php:197
 #, php-format
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inc/woocommerce.php:261 inc/woocommerce.php:278
+msgid "Vendor:"
+msgstr ""
+
+#: inc/woocommerce.php:313 inc/woocommerce.php:320
+msgid "Out of stock"
+msgstr ""
 
 #. translators: %s: search query.
 #: search.php:21
@@ -177,6 +327,19 @@ msgstr ""
 
 #: single.php:24
 msgid "Next:"
+msgstr ""
+
+#. translators: 1: list of categories.
+#. translators: 1: list of tags.
+#: template-parts/content-all-post.php:32
+#: template-parts/content-all-post.php:39
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: template-parts/content-frontpage.php:21 template-parts/content-page.php:24
+#: template-parts/content-post.php:69 template-parts/content.php:53
+msgid "Pages:"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -202,12 +365,8 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:25 template-parts/content.php:53
-msgid "Pages:"
-msgstr ""
-
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:40
+#: template-parts/content-post.php:56 template-parts/content.php:40
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -227,4 +386,20 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "vivapage"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "spravochnik"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "dashboard"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "No sidebar"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "shop"
 msgstr ""

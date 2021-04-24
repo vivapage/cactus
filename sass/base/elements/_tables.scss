@@ -38,3 +38,11 @@ table tbody tr:nth-child(even) {
 table tbody tr td p {
   margin: 0.1em;
 }
+
+div.textwidget table.frends tbody tr {
+  background: transparent;
+  td {
+    border: none;
+    text-align: center;
+  }
+}
